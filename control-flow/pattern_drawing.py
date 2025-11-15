@@ -1,21 +1,20 @@
-#!/usr/bin/env python3
+#!/usr.bin/env python3
 # This script uses nested loops (while and for) to print a square pattern
 # of asterisks based on user input size.
 
-# 1. Prompt User for Pattern Size
+# 1. Prompt User for Pattern Size using the exact required structure
 try:
-    size_str = input("Enter the size of the pattern: ")
-    size = int(size_str)
-    
-    # Input validation: ensure size is a positive integer
-    if size <= 0:
-        print("Please enter a positive integer.")
-        exit()
-        
+    # Use the direct int(input(...)) structure
+    size = int(input("Enter the size of the pattern: "))
 except ValueError:
     print("Invalid input. Please enter a valid integer.")
     exit()
 
+# Input validation: ensure size is a positive integer
+if size <= 0:
+    print("Please enter a positive integer.")
+    exit()
+    
 # 2. Draw the Pattern using nested loops
 
 # Outer loop (while loop) controls the rows (height)

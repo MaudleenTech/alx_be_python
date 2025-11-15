@@ -18,15 +18,22 @@ match priority:
     case 'low':
         priority_desc = "low"
     case _:
-        priority_desc = "unlisted"
+        # Use the input priority if unlisted, for flexibility
+        priority_desc = priority
 
-# Start building the final reminder string structure
-reminder_message = f"Reminder: '{task}' is a {priority_desc} priority task"
-
-# 3. Modify the Reminder Based on Time Sensitivity using an if statement
+# 3. Determine Final Output Message based on time sensitivity
 if time_bound == 'yes':
-    # Append the required time-sensitive message directly
-    reminder_message += " that requires immediate attention today!"
+    # Output for time-bound tasks (starts with 'Reminder: ')
+    final_message = (
+        f"Reminder: '{task}' is a {priority_desc} priority task"
+        " that requires immediate attention today!"
+    )
+else:
+    # Output for non-time-bound tasks (starts with 'Note: ')
+    final_message = (
+        f"Note: '{task}' is a {priority_desc} priority task."
+        " Consider completing it when you have free time."
+    )
 
 # 4. Output the Customized Reminder
-print(reminder_message)
+print(final_message)

@@ -1,4 +1,4 @@
-#!/usr.bin/env python3
+#!/usr/bin/env python3
 # This script uses conditional statements (if/elif/else) to provide
 # clothing recommendations based on user input regarding the weather.
 
@@ -16,5 +16,4 @@ elif weather == "cold":
     print("Make sure to wear a warm coat and a scarf.")
 
 else:
-    # Handle unexpected input
     print("Sorry, I don't have recommendations for this weather.")

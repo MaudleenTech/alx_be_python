@@ -1,6 +1,6 @@
 # This module contains the perform_operation function for basic arithmetic.
 
-def perform_operation(num1: float, num2: float, operation: str):
+def perform_operation(num1, num2, operation):
     if operation == 'add':
         return num1 + num2
     

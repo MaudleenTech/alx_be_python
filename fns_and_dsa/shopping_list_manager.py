@@ -1,7 +1,7 @@
 # This script implements a simple menu-driven shopping list manager using Python lists.
 
 def display_menu():
-    print("\nShopping List Manager")
+    print("Shopping List Manager")
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View List")
@@ -39,7 +39,7 @@ def main():
         elif choice == '3':
             # 3. View List
             if shopping_list:
-                print("\n--- Your Shopping List ---")
+                print("--- Your Shopping List ---")
                 # Print each item with its index (starting from 1 for user-friendliness)
                 for index, item in enumerate(shopping_list, 1):
                     print(f"{index}. {item}")

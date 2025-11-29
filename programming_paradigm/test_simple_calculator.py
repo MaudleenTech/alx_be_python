@@ -19,7 +19,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertAlmostEqual(self.calc.add(0.1, 0.2), 0.3)
 
     # Consolidated subtraction tests to satisfy the check for 'test_subtract'
-    def test_subtract(self):
+    def test_subtraction(self):
         # Positive results
         self.assertEqual(self.calc.subtract(10, 4), 6)
         # Negative results
@@ -31,7 +31,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertAlmostEqual(self.calc.subtract(5.5, 2.2), 3.3)
 
     # Consolidated multiplication tests to satisfy the check for 'test_multiply'
-    def test_multiply(self):
+    def test_multiplication(self):
         # Positive results
         self.assertEqual(self.calc.multiply(6, 7), 42)
         # Negative results
@@ -43,7 +43,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertAlmostEqual(self.calc.multiply(2.5, 2), 5.0)
 
     # Consolidated division tests to satisfy the check for 'test_divide'
-    def test_divide(self):
+    def test_division(self):
         # Normal division
         self.assertEqual(self.calc.divide(10, 2), 5)
         # Division resulting in float
